@@ -1,4 +1,5 @@
 hapat per ekzekutimin e kodit:
+
 kliko ne <code>
 kliko ne download zip
 ekstraktoni folderin zip
