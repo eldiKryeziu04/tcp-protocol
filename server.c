@@ -228,10 +228,9 @@ void save_log(const char* ip, const char* cmd) {
 int main() {
     WSADATA wsa;
     WSAStartup(MAKEWORD(2, 2), &wsa);
-    // Brenda main(), pas WSAStartup
 char hostName[256];
 struct hostent *hostEntry;
-char primaryIP[20] = "127.0.0.1"; // Default nese dështon gjithçka
+char primaryIP[20] = "127.0.0.1"; 
 
 if (gethostname(hostName, sizeof(hostName)) == 0) {
     hostEntry = gethostbyname(hostName);
@@ -241,10 +240,9 @@ if (gethostname(hostName, sizeof(hostName)) == 0) {
             memcpy(&addr, hostEntry->h_addr_list[i], sizeof(struct in_addr));
             char* ip_str = inet_ntoa(addr);
 
-            // Filtri: Marrim IP-ne e pare qe fillon me 192 ose 10 (IP-te tipike LAN)
             if (strncmp(ip_str, "192.", 4) == 0 || strncmp(ip_str, "10.", 3) == 0) {
                 strcpy(primaryIP, ip_str);
-                break; // E gjetem ate kryesoren, ndalo ciklin
+                break; 
             }
         }
     }
