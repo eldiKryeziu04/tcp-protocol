@@ -35,7 +35,7 @@ int main() {
         fflush(stdout);
     }
 
-    while (1) {
+    while (1) { 
         char cmd[100];
         printf("Komandat:\n/read <filename> \n/list\n/info <filename>\n/download <filename>\n/upload <filename>\n/search <keyword>\n/delete <filename>\nkomanda:");
         fflush(stdout);
